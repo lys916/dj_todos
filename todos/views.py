@@ -9,6 +9,7 @@ class TodoView(viewsets.ModelViewSet):
 
 	def get_queryset(self):
 		print('PRINT user', self.request.user)
+		print('PRINT request method', self.request.method)
 		user = self.request.user
 
 		if user.is_anonymous:
